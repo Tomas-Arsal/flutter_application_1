@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/utils/app_images.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Screen4 extends StatelessWidget {
   const Screen4({super.key});
@@ -12,12 +14,12 @@ class Screen4 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.network(
-              'https://via.placeholder.com/308x315', // Replace with your image URL
+            SvgPicture.asset(
+            Assets.assetsImagesSplash,
               height: 200,
               width: 200,
-              fit: BoxFit.cover,
             ),
+            
             const SizedBox(height: 20),
             const Text(
               'Enterprise Team Management',
@@ -41,9 +43,9 @@ class Screen4 extends StatelessWidget {
               onPressed: () {},
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.red,
-                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 130, vertical: 15),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(5),
                 ),
               ),
               child: const Text(
@@ -52,17 +54,17 @@ class Screen4 extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 15),
-            OutlinedButton(
+            ElevatedButton(
               onPressed: () {},
-              style: OutlinedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 15),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
-                ),
+                  borderRadius: BorderRadius.circular(5),                ),
               ),
               child: const Text(
-                'Already have an account',
-                style: TextStyle(fontSize: 16, color: Colors.black),
+                'Already have an account?',
+                style: TextStyle(fontSize: 16, color: Colors.grey),
               ),
             ),
           ],
